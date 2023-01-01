@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="../">Home</a>
+    </div>
+    <div class="container center middle">
+        <h1>Create new account</h1>
+        <div class="two-colomns">
+            <div>
+                <div class="form-input">
+                    <label for="title">Title</label>
+                    <select name="title" name="title" id="select_title" required title="Your title">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Messrs">Messrs</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-input">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="txt_firstName" required title="Your first name">
+                </div>
+
+                <div class="form-input">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="txt_lastName" required title="Your last name">
+                </div>
+
+                <div class="form-input">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" name="phoneNumber" id="txt_phoneNumber" required title="Your phone number">
+                </div>
+
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="txt_email" required title="Your email">
+                </div>
+
+                <div class="form-input">
+                    <label for="gender">Gender</label>
+                    <select name="gender" name="gender" id="select_gender" required title="Your gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-input">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" name="email" id="txt_birthday" required title="Your birthday">
+                </div>
+
+                <div class="form-input">
+                    <label for="city">City</label>
+                    <select name="city" name="city" id="select_city" required title="Your city">
+                        <option value="Damascus">Damascus</option>
+                        <option value="Aleppo">Aleppo</option>
+                        <option value="Latakia">Latakia</option>
+                        <option value="Hama">Hama</option>
+                        <option value="Homs">Homs</option>
+                        <option value="Tartous">Tartous</option>
+                        <option value="As Swaida">As Swaida</option>
+                        <option value="Qounitra">Qounitra</option>
+                        <option value="Daraa">Daraa</option>
+                        <option value="Deir azor">Deir azor</option>
+                        <option value="Hassaka">Hassaka</option>
+                        <option value="Kamishli">Kamishli</option>
+                        <option value="Raqqa">Raqqa</option>
+                    </select>
+                </div>
+
+                <div class="form-input">
+                    <label for="address">Address</label>
+                    <textarea name="address" id="txt_address" cols="30" rows="3" title="Your address"
+                        required></textarea>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="form-input with-hint">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="txt_username" required title="Your username">
+                    <div class="form-input hint">You can use any letters and _ only</div>
+                    <div class="form-input hint">Must be at least 8 characters length</div>
+                </div>
+
+                <div class="form-input with-hint">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="txt_password" required title="Enter password here">
+                    <div class="form-input hint">Must be at least 8 characters long</div>
+                    <div class="form-input hint">Must contain one uppercase letter</div>
+                    <div class="form-input hint">Must contain one number</div>
+                </div>
+
+                <div class="form-input with-hint">
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="password" name="confirm-password" id="txt_confirm_password" required
+                        title="Reenter password here">
+                    <div class="form-input hint">Must match password field above</div>
+                </div>
+
+                <div class="form-input">
+                    <label for="occupation">Occupation</label>
+                    <select name="occupation" name="occupation" id="select_occupation" required title="Your occupation">
+                        <option value="1">Accounting/Finance</option>
+                        <option value="2">Information Technology</option>
+                        <option value="4">Consulting/Legal</option>
+                        <option value="5">Customer Service/Support</option>
+                        <option value="6">Education/Training</option>
+                        <option value="7">Telecomunications/Network</option>
+                        <option value="9">General Administrative</option>
+                        <option value="10">Government/Military</option>
+                        <option value="11">Human Resources/Management</option>
+                        <option value="12">Manufacturing/Production/Operations</option>
+                        <option value="13">Professional (medical, legal, etc.)</option>
+                        <option value="14">Research and Development</option>
+                        <option value="15">Marketing</option>
+                        <option value="16">Sales and Distribution</option>
+                        <option value="17">Selft-employed/Owner</option>
+                        <option value="18">Student</option>
+                        <option value="19">Tradesman/Craftsman</option>
+                        <option value="20">Unemployed/Between Jobs</option>
+                        <option value="21">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-input">
+                    <input type="checkbox" name="terms" id="chk_terms" required title="Accept terms and conditions">
+                    <label for="terms">Accept <a href="#" onclick="openPopup()">terms and conditions</a> </label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-input">
+            <input type="button" value="Create account" onclick="createAccount()">
+        </div>
+    </div>
+    <div id="popup" class="hidden">
+        <div class="overlay"></div>
+        <div class="popup-body">
+            <h2>Terms and Conditions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                <br>
+                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim
+                pellentesque felis.
+                Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                diam. Sed arcu. Cras consequat.
+                <br>
+                <br>
+                Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu
+                erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique
+                cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+                <br>
+                <br>
+                Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed
+                augue.
+                <br>
+                Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet.
+                Quisque fermentum.
+                <br>
+                Cum sociis natoque penatibus et magnis xdis parturient montes, nascetur ridiculus mus.
+                <br>
+                <br>
+                Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet.
+                <br> Fusce ut est sed dolor gravida convallis. Morbi vitae ante. Vivamus ultrices luctus nunc.
+                Suspendisse et dolor.
+                Etiam dignissim. Proin malesuada adipiscing lacus. Donec metus. Curabitur gravida
+            </p>
+            <input type="button" value="Close" title="Close" onclick="closePopup()">
+        </div>
+    </div>
+    <footer>
+        <div>Kod by Mohammad.</div>
+        <div> 2023 <span class="c-icon">©</span> COPYLEFT, No Rights Reserved.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/register.js"></script>
+</body>
+
+</html>

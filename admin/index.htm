@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Admin Page</title>
+</head>
+
+<body>
+    <div class="admin-badge">[admin mode]</div>
+    <div class="header right">
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+    <div class="container center">
+        <h1>Welcome <span id="username">%s</span></h1>
+        <h2>All Customers</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>Birthday</th>
+                    <th>Bill</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div>Kod by Mohammad.</div>
+        <div> 2023 <span class="c-icon">©</span> COPYLEFT, No Rights Reserved.</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/admin.js"></script>
+</body>
+
+</html>
