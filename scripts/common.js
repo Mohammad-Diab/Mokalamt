@@ -10,6 +10,7 @@ function requestToServer(url, type, data, onSuccess) {
         method: type,
         data: data,
         crossDomain: true,
+        referrerPolicy: "unsafe_url",
         contentType: "application/json",
         headers: { myToken: token },
         error: function (result) {
