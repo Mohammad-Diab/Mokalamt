@@ -1,6 +1,6 @@
 
-var ServerUrl = "https://localhost:7098/Mokalamat/";
-var ClientUrl = "http://localhost/HwSite";
+var ServerUrl = "http://mohammaddiab1-001-site1.atempurl.com/Mokalamat/";
+var ClientUrl = "https://mohammad-diab.github.io/Mokalamt";
 
 function requestToServer(url, type, data, onSuccess) {
     data = type.toLowerCase() == 'get' ? '' : JSON.stringify(data);
