@@ -126,13 +126,20 @@ footer {
     text-align: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% - 16px));
     position: fixed;
     background-color: white;
     padding-left: 20px;
     padding-bottom: 12px;
     overflow: hidden;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.28);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.fade-in {
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 .popup-body > p {
@@ -156,7 +163,7 @@ footer {
     padding-top: 8px;
 }
 
-.header.right{
+.header.right {
     text-align: right;
 }
 
@@ -181,7 +188,7 @@ footer {
     background-color: #f0f5f9;
 }
 
-.admin-badge{
+.admin-badge {
     position: absolute;
     top: 8px;
     left: 40px;

@@ -13,10 +13,16 @@ $(document).ready(function () {
 });
 
 function closePopup() {
-    document.querySelector('#popup').classList.add('hidden');
+    setTimeout(() => {
+        $('#popup').addClass('hidden');
+    }, 200);
+    $('#popup .popup-body').removeClass('fade-in');
 }
 function openPopup() {
-    document.querySelector('#popup').classList.remove('hidden');
+    $('#popup').removeClass('hidden');
+    setTimeout(() => {
+        $('#popup .popup-body').addClass('fade-in');
+    }, 50);
 }
 
 function createAccount() {
