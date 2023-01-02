@@ -26,7 +26,7 @@ function RefreshTable() {
                 html += '<td>' + element.phone + '</td>';
                 html += '<td>' + element.birthday + '</td>';
                 html += '<td>' + element.bill + '</td>';
-                html += '<td><input type="button" value="Set bill" ' + (element.isAdmin ? 'disabled' : 'onclick=\'setUserBill("' + element.phone + '", "' + element.username + '")\'') + '></td>';
+                html += '<td><input type="button" value="Set bill" ' + (element.isAdmin ? 'disabled' : 'onclick=\'setUserBill("' + element.phone + '", "' + element.fullName + '")\'') + '></td>';
                 html += '</tr>';
             }
             $('#tableBody').append(html);
