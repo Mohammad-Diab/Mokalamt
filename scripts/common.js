@@ -1,5 +1,5 @@
 
-var ServerUrl = "http://mohammaddiab1-001-site1.atempurl.com/Mokalamat/";
+var ServerUrl = "https://mokalamatapi20230102132936.azurewebsites.net/Mokalamat/";
 var ClientUrl = "https://mohammad-diab.github.io/Mokalamt";
 
 function requestToServer(url, type, data, onSuccess) {
@@ -10,7 +10,6 @@ function requestToServer(url, type, data, onSuccess) {
         method: type,
         data: data,
         crossDomain: true,
-        referrerPolicy: "unsafe_url",
         contentType: "application/json",
         headers: { myToken: token },
         error: function (result) {
