@@ -39,6 +39,7 @@ function setUserBill(phone, name) {
         requestToServer('SetUserBill?phoneNumber=' + phone + '&bill=' + bill, 'get', '', (date) => {
             if(date){
                 showMessage('bill updated successfully');
+                RefreshTable();
             }
         })
     });
