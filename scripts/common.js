@@ -13,7 +13,7 @@ function requestToServer(url, type, data, onSuccess) {
         contentType: "application/json",
         headers: { myToken: token },
         error: function (result) {
-            showMessage(result.Message);
+            showMessage('something went wrong!.');
         },
         success: function (result) {
             if (typeof onSuccess == 'function') {
